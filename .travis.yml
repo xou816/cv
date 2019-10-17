@@ -2,7 +2,7 @@ services:
   - docker
 
 script:
-  - docker run --rm -e THEUID=`id -u $USER` -v $PWD:/var/doxerlive atrendel/doxerlive:9-basic
+  - "docker run --rm -e THEUID=0 -v $TRAVIS_BUILD_DIR:/var/doxerlive atrendel/doxerlive:9-basic"
 
 deploy:
   provider: releases
