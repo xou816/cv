@@ -1,0 +1,8 @@
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.cpt
+*.out
+#https://stackoverflow.com/questions/12343452/how-to-publish-artifacts-in-travis-ci/24100779#24100779

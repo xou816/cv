@@ -1,0 +1,155 @@
+\documentclass[11pt]{article}
+\usepackage[top=1cm, left=1.8cm, right=1.8cm]{geometry}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[prefix=sol]{xcolor-solarized}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{pagecolor}
+\usepackage{fontawesome}
+\usepackage{xifthen}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shadows.blur}
+
+\newcommand\event[2]{\node[event] (#1) {}; \node[evtext] at (#1) {#2};}
+\newcommand\eventalt[2]{\node[event, fill=solbase1] (#1) {}; \node[evtext] at (#1) {#2};}
+\newcommand\evdate[1]{\node[evdate] {\footnotesize #1};}
+\newcommand\ghost[1]{\coordinate (#1);}
+\newcommand\connect[2]{\path[connector] (#1) to[out=90,in=-90] (#2);}
+
+
+\definecolor{bg}{HTML}{fafafa}
+\definecolor{gray}{gray}{0.6}
+\definecolor{lightgray}{gray}{0.9}
+
+\newcommand\ouisncf{\includegraphics[height=0.9\baselineskip]{ouisncf.pdf}}
+\newcommand\adfab{\raisebox{-.3\baselineskip}{\includegraphics[height=0.9\baselineskip]{adfabn.pdf}}}
+\newcommand\ecn{\raisebox{-.3\baselineskip}{\includegraphics[height=1.2\baselineskip]{ecn.pdf}}}
+
+\newcommand\link[1]{\underline{\smash{#1}}}
+
+\newcommand\thetagcolor{solred}
+\newcommand\tagcollection[1]{\renewcommand{\thetagcolor}{#1}}
+\newcommand\theicon{star-full}
+\newcommand\tag[2]{%
+\renewcommand\theicon{\ifthenelse{\equal{#2}{1}}{\faicon{star}}{\faicon{star-half-o}}}%
+\raisebox{-.3\baselineskip}{%
+	\noindent\begin{tikzpicture}%
+	\node[fill=\thetagcolor, text height=1.5ex, minimum height=1.5ex, text=white, rounded corners] at (0, 0) {\footnotesize #1 \theicon};
+	\end{tikzpicture}
+}}
+\newcommand\colsec[1]{\section*{\color{solred} #1}}
+
+\begin{document}
+
+\newpagecolor{bg}
+\pagestyle{empty}
+
+\begin{tikzpicture}[remember picture, overlay]
+        \fill[white, rounded corners=12, blur shadow={shadow xshift=0, shadow yshift=0, shadow blur radius=8, shadow opacity=5}] ($(current page.north west) + (.5, -5.5)$) rectangle ($(current page.south east) + (-.5, .5)$);
+\end{tikzpicture}
+
+
+\noindent\begin{minipage}[t]{0.3\textwidth}
+
+\textbf{\large Alexandre Trendel} \\
+Nantes, France \\
+\faicon{phone} +33 6 21 83 50 27 \\
+\faicon{envelope} \href{mailto:trendel.alexandre@gmail.com}{\link{trendel.alexandre@gmail.com}} \\
+\faicon{github} \href{https://github.com/xou816}{\link{https://github.com/xou816}}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+
+\large
+
+French Engineer with 3-year experience in web development looking to work abroad.
+
+\begin{center}\color{solred}\rule{2cm}{1pt}\end{center}
+
+\end{minipage}
+
+\vspace{2cm}
+
+\colsec{Experience and education}
+
+\begin{tikzpicture}
+\tikzstyle{event}=[circle,fill=solblue,inner sep=0pt,minimum size=8pt]
+\tikzstyle{evtext}=[right,outer sep=1.5em,text width=0.8\textwidth]
+\tikzstyle{evdate}=[left]
+\tikzstyle{connector}=[draw=solbase1]
+\tikzstyle{every path}=[draw]
+\matrix [column sep={1em,between origins},row sep=\lineskip]
+{
+\evdate{sept 2018} & \event{oui2}{\textbf{Full-stack web developer, \ouisncf{}} \newline
+Work-study contract. Tasks : full-stack web development as part of an agile team, in a complex technical environment.} & \\
+\evdate{may 2018} &  & \event{adfab}{\textbf{Project manager, \adfab{} (Canada)} \newline
+Four-month internship in Montréal, Canada. Tasks : interaction with clients, team management, functional specifications, testing.} \\
+\evdate{dec 2016} & \event{oui}{\textbf{Full-stack web developer, \ouisncf{}} \newline
+Work-study contract. Tasks : integration of applications to an internal cloud based on OpenStack; development of a translations management tool.} & \ghost{g1}\\
+\evdate{sept 2016} & \eventalt{ecn}{\textbf{Engineering student, \ecn{}} \newline
+A highly selective French school of engineering conferring a diploma equivalent to a Master’s Degree. Specialization in Applied Mathematics and Data Science. \textit{Graduation expected in september 2019.}} & \\
+\evdate{sept 2014} & \eventalt{prepa}{\textbf{Student in Classes Préparatoires, Lycée Montesqieu}\newline
+A two-year intensive course in Mathematics, Physics, Automatics and Mechanics, preparing for the national entry examinations for French schools of engineering.} & \\
+\evdate{june 2014} & \eventalt{bac}{\textbf{Baccalauréat, Lycée Gabriel Touchard}\newline
+French equivalent of high school diploma/A levels -- general studies with a specialization in Science. Obtained with distinction.} & \\
+};
+\connect{bac}{prepa};
+\connect{prepa}{ecn};
+\connect{ecn}{g1};
+\connect{ecn}{oui};
+\connect{oui}{oui2};
+\connect{g1}{adfab};
+\connect{adfab}{oui2};
+\end{tikzpicture}
+
+\colsec{Relevant skills}
+
+\noindent\begin{minipage}[t]{0.6\textwidth}
+
+\subsection*{Web development}
+
+\tagcollection{solblue}
+\tag{java}{1} \tag{kotlin}{2} \tag{spring}{1} \tag{javascript}{1} \tag{react}{1} \tag{php}{1} \tag{node.js}{2} \tag{docker}{1} \tag{jenkins}{2} \tag{git}{1}
+
+\end{minipage}\hspace{.5cm}
+\begin{minipage}[t]{0.3\textwidth}
+
+\subsection*{Data science}
+
+\tagcollection{solred}
+\tag{python}{1} \tag{R}{2} \tag{tensorflow}{2} \tag{scikit-learn}{2}
+
+\end{minipage}
+
+% spacing hack
+\paragraph{}\,
+
+\noindent\begin{minipage}[t]{0.6\textwidth}
+
+\colsec{Languages}
+
+\begin{itemize}
+\setlength\itemsep{0pt}
+\item[$\bullet$] French: native speaker
+\item[$\bullet$] English: fairly fluent (TOEIC 990)
+\item[$\bullet$] German: basic working knowledge
+\end{itemize}
+
+\end{minipage}\hspace{.5cm}
+\begin{minipage}[t]{0.3\textwidth}
+
+\colsec{Interests}
+
+Science Fiction, Rock and Jazz music, cooking, maths and board games.
+
+\end{minipage}
+
+\end{document}
