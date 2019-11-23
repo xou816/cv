@@ -1,0 +1,102 @@
+\documentclass{cv}
+
+\begin{document}
+
+\newpagecolor{bg}
+\pagestyle{empty}
+
+\begin{tikzpicture}[remember picture, overlay]
+        \fill[white, rounded corners=12, blur shadow={shadow xshift=0, shadow yshift=0, shadow blur radius=8, shadow opacity=5}] ($(current page.north west) + (.5, -5.5)$) rectangle ($(current page.south east) + (-.5, .5)$);
+\end{tikzpicture}
+
+
+\begin{minipage}[c]{0.6\textwidth}
+
+\begin{tikzpicture}
+\node[inner sep=0pt] at (0,0) {\includegraphics[width=3cm]{resources/photo.jpg}};
+\draw[bg, rounded corners=.3cm, line width=.25cm] 
+    (current bounding box.north west) -- 
+    (current bounding box.north east) --
+    (current bounding box.south east) --
+    (current bounding box.south west) -- cycle;
+\end{tikzpicture}
+% \includegraphics[width=3cm]{photo.jpg}
+
+\end{minipage}
+\begin{minipage}[c]{0.4\textwidth}
+
+\textbf{\large Alexandre Trendel} \\
+83, rue de Coulmiers \\
+44000 Nantes \\
+\faicon{phone} +33 6 21 83 50 27 \\
+\faicon{envelope} \href{mailto:trendel.alexandre@gmail.com}{\link{trendel.alexandre@gmail.com}} \\
+\faicon{github} \href{https://github.com/xou816}{\link{https://github.com/xou816}} \\
+
+\end{minipage}
+
+\vspace{1.2cm}
+
+\colsec{Expérience et formation}
+
+\begin{tikzpicture}
+\tikzstyle{event}=[circle,fill=solblue,inner sep=0pt,minimum size=8pt]
+\tikzstyle{evtext}=[right,outer sep=1.5em,text width=0.8\textwidth]
+\tikzstyle{evdate}=[left]
+\tikzstyle{connector}=[draw=solbase1]
+\tikzstyle{every path}=[draw]
+\matrix [column sep={1em,between origins},row sep=\lineskip]
+{
+\evdate{sept 2018} & \event{oui2}{\textbf{Assistant ingénieur études et développement, \ouisncf{}} \newline
+Missions : développement full-stack au sein de l'équipe compte client.} & \\
+\evdate{mai 2018} &  & \event{adfab}{\textbf{Project Manager, \adfab{}} \newline
+Stage de 4 mois à Montréal. Suivi de projet et d'équipe, rédaction de spécifications fonctionnelles, tests fonctionnels.} \\
+\evdate{déc 2016} & \event{oui}{\textbf{Assistant ingénieur études et développement, \ouisncf{}} \newline
+Contrat d'alternance. Missions : intégration d'outils internes à un cloud applicatif, développement d'un outil de gestions de traductions.} & \ghost{g1}\\
+\evdate{sept 2016} & \eventalt{ecn}{\textbf{Ingénieur généraliste, \ecn{}} \newline
+Formation en alternance, 3 ans. Spécialisation : mathématiques appliquées et sciences des données.} & \\
+\evdate{sept 2014} & \eventalt{prepa}{\textbf{Classe préparatoire MPSI/MP, Lycée Montesqieu} (Le Mans)\newline
+Projet de TIPE : développement d'un réseau de neurones artificiels pour la reconnaissance de caractères automatique.} & \\
+\evdate{juin 2014} & \eventalt{bac}{\textbf{Baccalauréat général, Lycée Gabriel Touchard} (Le Mans)\newline
+Série scientifique. Obtenu avec mention ``très bien''.} & \\
+};
+\connect{bac}{prepa};
+\connect{prepa}{ecn};
+\connect{ecn}{g1};
+\connect{ecn}{oui};
+\connect{oui}{oui2};
+\connect{g1}{adfab};
+\connect{adfab}{oui2};
+\end{tikzpicture}
+
+\colsec{Compétences}
+
+\noindent\begin{minipage}[t]{0.6\textwidth}
+
+\subsection*{Développement web}
+
+\tagcollection{solblue}
+\tag{java}{1} \tag{kotlin}{2} \tag{spring}{1} \tag{javascript}{1} \tag{react}{1} \tag{php}{1} \tag{node.js}{2} \tag{docker}{1} \tag{jenkins}{2} \tag{git}{1}
+
+\end{minipage}\hspace{.5cm}
+\begin{minipage}[t]{0.3\textwidth}
+
+\subsection*{Data science}
+
+\tagcollection{solred}
+\tag{python}{1} \tag{R}{2} \tag{tensorflow}{2} \tag{scikit-learn}{2}
+
+\end{minipage}
+
+\paragraph{Langues} anglais (courant, TOEIC 990), allemand (notions)
+
+
+\colsec{Centres d'intérêt}
+
+\begin{itemize}
+\item[$\bullet$] jeux de société
+\item[$\bullet$] cuisine
+\item[$\bullet$] romans et nouvelles de science-fiction
+% \item[$\bullet$] rock, jazz
+\end{itemize}
+
+\end{document}

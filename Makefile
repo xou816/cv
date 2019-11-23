@@ -1,14 +1,15 @@
 all: install build
 
-build: cv_en.tex
+build: cv_en.tex cv_fr.tex
 	latexmk
 	latexmk -c
 
-watch: cv_en.tex
+watch: cv_en.tex cv_fr.tex
 	latexmk -pvc
 
 install:
-	tlmgr install lm xcolor xcolor-solarized pagecolor fontawesome xifthen ifmtarg pgf pgf-blur ec
+	tlmgr update --self
+	tlmgr install lm xcolor xcolor-solarized pagecolor fontawesome xifthen ifmtarg pgf pgf-blur ec babel-french
 
 clean: 
 	latexmk -C

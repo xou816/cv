@@ -1,50 +1,4 @@
-\documentclass[11pt]{article}
-\usepackage[top=1cm, left=1.8cm, right=1.8cm]{geometry}
-
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\renewcommand{\familydefault}{\sfdefault}
-
-\usepackage[prefix=sol]{xcolor-solarized}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{pagecolor}
-\usepackage{fontawesome}
-\usepackage{xifthen}
-\usepackage{tikz}
-\usetikzlibrary{calc}
-\usetikzlibrary{shadows.blur}
-
-\newcommand\event[2]{\node[event] (#1) {}; \node[evtext] at (#1) {#2};}
-\newcommand\eventalt[2]{\node[event, fill=solbase1] (#1) {}; \node[evtext] at (#1) {#2};}
-\newcommand\evdate[1]{\node[evdate] {\footnotesize #1};}
-\newcommand\ghost[1]{\coordinate (#1);}
-\newcommand\connect[2]{\path[connector] (#1) to[out=90,in=-90] (#2);}
-
-
-\definecolor{bg}{HTML}{fafafa}
-\definecolor{gray}{gray}{0.6}
-\definecolor{lightgray}{gray}{0.9}
-
-\newcommand\ouisncf{\includegraphics[height=0.9\baselineskip]{ouisncf.pdf}}
-\newcommand\adfab{\raisebox{-.3\baselineskip}{\includegraphics[height=0.9\baselineskip]{adfabn.pdf}}}
-\newcommand\ecn{\raisebox{-.3\baselineskip}{\includegraphics[height=1.2\baselineskip]{ecn.pdf}}}
-
-\newcommand\link[1]{\underline{\smash{#1}}}
-
-\newcommand\thetagcolor{solred}
-\newcommand\tagcollection[1]{\renewcommand{\thetagcolor}{#1}}
-\newcommand\theicon{star-full}
-\newcommand\tag[2]{%
-\renewcommand\theicon{\ifthenelse{\equal{#2}{1}}{\faicon{star}}{\faicon{star-half-o}}}%
-\raisebox{-.3\baselineskip}{%
-	\noindent\begin{tikzpicture}%
-	\node[fill=\thetagcolor, text height=1.5ex, minimum height=1.5ex, text=white, rounded corners] at (0, 0) {\footnotesize #1 \theicon};
-	\end{tikzpicture}
-}}
-\newcommand\colsec[1]{\section*{\color{solred} #1}}
+\documentclass{cv}
 
 \begin{document}
 
@@ -70,7 +24,7 @@ Nantes, France \\
 
 \large
 
-French Engineer with 3-year experience in web development looking to work abroad.
+French Engineer with 3-year experience in web development.
 
 \begin{center}\color{solred}\rule{2cm}{1pt}\end{center}
 

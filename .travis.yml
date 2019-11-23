@@ -10,6 +10,7 @@ deploy:
     secure: "oeMcxCaeEgY20JQeKrsHpny80rwgEZ05Ud1gyUjC9oeiRLyQjjjOSRnK+/oQOW8MeYsOogUfRxMAHVMj6x6r39nlOyNqQrFrzGtDLLYe6eL1ukbYKYj2Cm0hq9htys6Tz1mBW5+Bg7Tr84/WhOcOyAoBpcY1iN6q1yaf86LtCnqDrtdCMw+PZmoATO7iJeADhNQctZmHMKv/R2a3ZQwbf+V4pgQoQNQRmgxFNd4WkMcMZ5Bb0djzpHMaUljFmn4MopkFCfPSsERrSDJZFfLvhxKGGonaNgguH1FeuHjyW3jJMFnLLZHQ5hXfRBNRkff4yUYjoc3Zeax7UWuKaB8UBlRq/XyHFI6VEH69nMs24UGmIrxuRP67egm3xweEC2RCSA+uKyJSzR+f9MdrnguGP6k9MW7obIxkE4Id/XOOyzTvGFIf3+cW0MTGnpZwINFnXOoAX+rVcw3zOPGb1JbbCmBQdsqns1LjLI6qOem6HZcoSsxrEpNgrFd9iqqy7B5SlO08JEZHvcelcA/5Hp9Qe/k69ID8x+WbkLqs1uRE7PpfkYEaWDrUskYRG5wsDTJqJOOoh0+GgNsqaUXN2l2MsGbTxsXfi4bu+/xKt4uGx4vv9w9EUjqhVlJQZ5NdWju7fwinB4WfcCWgELkfezEJN6IIAQ9Qjdp0zpS5TAOOBQ8="
   file:
     - cv_en.pdf
+    - cv_fr.pdf
   skip_cleanup: true
   on:
     tags: true
