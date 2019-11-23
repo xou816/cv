@@ -24,7 +24,7 @@ Nantes, France \\
 
 \large
 
-French Engineer with 3-year experience in web development.
+French Engineer with 3-year experience in web and mobile development.
 
 \begin{center}\color{solred}\rule{2cm}{1pt}\end{center}
 
@@ -35,43 +35,57 @@ French Engineer with 3-year experience in web development.
 \colsec{Experience and education}
 
 \begin{tikzpicture}
-\tikzstyle{event}=[circle,fill=solblue,inner sep=0pt,minimum size=8pt]
-\tikzstyle{evtext}=[right,outer sep=1.5em,text width=0.8\textwidth]
-\tikzstyle{evdate}=[left]
-\tikzstyle{connector}=[draw=solbase1]
-\tikzstyle{every path}=[draw]
-\matrix [column sep={1em,between origins},row sep=\lineskip]
-{
-\evdate{sept 2018} & \event{oui2}{\textbf{Full-stack web developer, \ouisncf{}} \newline
-Work-study contract. Tasks : full-stack web development as part of an agile team, in a complex technical environment.} & \\
-\evdate{may 2018} &  & \event{adfab}{\textbf{Project manager, \adfab{} (Canada)} \newline
-Four-month internship in Montréal, Canada. Tasks : interaction with clients, team management, functional specifications, testing.} \\
-\evdate{dec 2016} & \event{oui}{\textbf{Full-stack web developer, \ouisncf{}} \newline
-Work-study contract. Tasks : integration of applications to an internal cloud based on OpenStack; development of a translations management tool.} & \ghost{g1}\\
-\evdate{sept 2016} & \eventalt{ecn}{\textbf{Engineering student, \ecn{}} \newline
-A highly selective French school of engineering conferring a diploma equivalent to a Master’s Degree. Specialization in Applied Mathematics and Data Science. \textit{Graduation expected in september 2019.}} & \\
-\evdate{sept 2014} & \eventalt{prepa}{\textbf{Student in Classes Préparatoires, Lycée Montesqieu}\newline
-A two-year intensive course in Mathematics, Physics, Automatics and Mechanics, preparing for the national entry examinations for French schools of engineering.} & \\
-\evdate{june 2014} & \eventalt{bac}{\textbf{Baccalauréat, Lycée Gabriel Touchard}\newline
-French equivalent of high school diploma/A levels -- general studies with a specialization in Science. Obtained with distinction.} & \\
+\matrix[column sep={1em,between origins}, row sep=\lineskip]{
+%
+\evdate{nov 2019} & \eventred{oui3}{
+\textbf{iOS Developer, \evtech{}} \newline
+Development of the iOS application for OUI.sncf, the official European distribution channel of the French railways (SNCF).} & \\
+
+\evdate{sept 2019} & \eventalt{graduation}{\bfseries Graduated from \ecn{}} & \\
+
+\spaceghost & & \\
+
+\evdate{sept 2018} & & \eventblue{oui2}{\bfseries Full-stack web developer, \evtech{}} \\
+
+\evdate{may 2018} & & \eventblue{adfab}{
+\textbf{Project manager, \adfab{} (Canada)} 
+\newline Four-month internship in Montréal. Tasks : interaction with clients, team management, functional specifications, testing.
+} \\
+
+\evdate{dec 2016} & & \eventblue{oui}{
+\textbf{Full-stack web developer, \evtech{}} 
+\newline Work-study contract. Tasks : full-stack web development as part of an agile team, in a complex technical environment.
+} \\
+
+\evdate{sept 2016} & \eventalt{ecn}{
+\textbf{Engineering student, \ecn{}} 
+\newline A highly selective French school of engineering conferring a diploma equivalent to a Master’s Degree. Specialization in Applied Mathematics and Data Science.
+} & \\
+
+\evdate{sept 2014} & \eventalt{prepa}{
+\textbf{Student in Classes Préparatoires, Lycée Montesqieu}
+\newline A two-year intensive course in Mathematics, Physics, Automatics and Mechanics, preparing for the national entry examinations for French schools of engineering.
+} & \\
+%
 };
-\connect{bac}{prepa};
+
 \connect{prepa}{ecn};
-\connect{ecn}{g1};
+\connect{ecn}{graduation};
 \connect{ecn}{oui};
-\connect{oui}{oui2};
-\connect{g1}{adfab};
+\connect{oui}{adfab};
 \connect{adfab}{oui2};
+\connect{oui2}{graduation};
+\connect{graduation}{oui3};
 \end{tikzpicture}
 
 \colsec{Relevant skills}
 
 \noindent\begin{minipage}[t]{0.6\textwidth}
 
-\subsection*{Web development}
+\subsection*{Web and mobile development}
 
 \tagcollection{solblue}
-\tag{java}{1} \tag{kotlin}{2} \tag{spring}{1} \tag{javascript}{1} \tag{react}{1} \tag{php}{1} \tag{node.js}{2} \tag{docker}{1} \tag{jenkins}{2} \tag{git}{1}
+\tag{swift}{2} \tag{javascript}{1} \tag{react}{1} \tag{java}{1} \tag{kotlin}{2} \tag{spring}{1} \tag{php}{1} \tag{node.js}{2} \tag{docker}{1} \tag{git}{1}
 
 \end{minipage}\hspace{.5cm}
 \begin{minipage}[t]{0.3\textwidth}
@@ -93,7 +107,7 @@ French equivalent of high school diploma/A levels -- general studies with a spec
 \begin{itemize}
 \setlength\itemsep{0pt}
 \item[$\bullet$] French: native speaker
-\item[$\bullet$] English: fairly fluent (TOEIC 990)
+\item[$\bullet$] English: fairly fluent, TOEIC 990 (2018)
 \item[$\bullet$] German: basic working knowledge
 \end{itemize}
 

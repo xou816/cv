@@ -39,43 +39,57 @@
 \colsec{Expérience et formation}
 
 \begin{tikzpicture}
-\tikzstyle{event}=[circle,fill=solblue,inner sep=0pt,minimum size=8pt]
-\tikzstyle{evtext}=[right,outer sep=1.5em,text width=0.8\textwidth]
-\tikzstyle{evdate}=[left]
-\tikzstyle{connector}=[draw=solbase1]
-\tikzstyle{every path}=[draw]
-\matrix [column sep={1em,between origins},row sep=\lineskip]
-{
-\evdate{sept 2018} & \event{oui2}{\textbf{Assistant ingénieur études et développement, \ouisncf{}} \newline
-Missions : développement full-stack au sein de l'équipe compte client.} & \\
-\evdate{mai 2018} &  & \event{adfab}{\textbf{Project Manager, \adfab{}} \newline
-Stage de 4 mois à Montréal. Suivi de projet et d'équipe, rédaction de spécifications fonctionnelles, tests fonctionnels.} \\
-\evdate{déc 2016} & \event{oui}{\textbf{Assistant ingénieur études et développement, \ouisncf{}} \newline
-Contrat d'alternance. Missions : intégration d'outils internes à un cloud applicatif, développement d'un outil de gestions de traductions.} & \ghost{g1}\\
-\evdate{sept 2016} & \eventalt{ecn}{\textbf{Ingénieur généraliste, \ecn{}} \newline
-Formation en alternance, 3 ans. Spécialisation : mathématiques appliquées et sciences des données.} & \\
-\evdate{sept 2014} & \eventalt{prepa}{\textbf{Classe préparatoire MPSI/MP, Lycée Montesqieu} (Le Mans)\newline
-Projet de TIPE : développement d'un réseau de neurones artificiels pour la reconnaissance de caractères automatique.} & \\
-\evdate{juin 2014} & \eventalt{bac}{\textbf{Baccalauréat général, Lycée Gabriel Touchard} (Le Mans)\newline
-Série scientifique. Obtenu avec mention ``très bien''.} & \\
+\matrix[column sep={1em,between origins}, row sep=\lineskip]{
+%
+\evdate{nov 2019} & \eventred{oui3}{
+\textbf{Ingénieur études et développement, \evtech{}} \newline
+Missions : développement de l'application iOS OUI.sncf.} & \\
+
+\evdate{sept 2019} & \eventalt{graduation}{\bfseries Diplômé de \ecn{}} & \\
+
+\spaceghost & & \\
+
+\evdate{sept 2018} & & \eventblue{oui2}{\bfseries Assistant ingénieur études et développement, \evtech{}} \\
+
+\evdate{mai 2018} & & \eventblue{adfab}{
+\textbf{Project Manager, \adfab{} (Canada)} 
+\newline Stage de 4 mois à Montréal. Suivi de projet et d'équipe, rédaction de spécifications fonctionnelles, tests fonctionnels.
+} \\
+
+\evdate{déc 2016} & & \eventblue{oui}{
+\textbf{Assistant ingénieur études et développement, \evtech{}} 
+\newline Contrat d'alternance. Missions : développement full-stack au sein de l'équipe compte client.
+} \\
+
+\evdate{sept 2016} & \eventalt{ecn}{
+\textbf{Ingénieur généraliste, \ecn{}} 
+\newline Spécialisation : mathématiques appliquées et sciences des données/Master ingénierie statistique à l'Université de Nantes.
+} & \\
+
+\evdate{sept 2014} & \eventalt{prepa}{
+\textbf{Classe préparatoire MPSI/MP, Lycée Montesqieu} (Le Mans)
+\newline Projet de TIPE : développement d'un réseau de neurones artificiels pour la reconnaissance de caractères automatique.
+} & \\
+%
 };
-\connect{bac}{prepa};
+
 \connect{prepa}{ecn};
-\connect{ecn}{g1};
+\connect{ecn}{graduation};
 \connect{ecn}{oui};
-\connect{oui}{oui2};
-\connect{g1}{adfab};
+\connect{oui}{adfab};
 \connect{adfab}{oui2};
+\connect{oui2}{graduation};
+\connect{graduation}{oui3};
 \end{tikzpicture}
 
 \colsec{Compétences}
 
 \noindent\begin{minipage}[t]{0.6\textwidth}
 
-\subsection*{Développement web}
+\subsection*{Développement web et mobile}
 
 \tagcollection{solblue}
-\tag{java}{1} \tag{kotlin}{2} \tag{spring}{1} \tag{javascript}{1} \tag{react}{1} \tag{php}{1} \tag{node.js}{2} \tag{docker}{1} \tag{jenkins}{2} \tag{git}{1}
+\tag{swift}{2} \tag{javascript}{1} \tag{react}{1} \tag{java}{1} \tag{kotlin}{2} \tag{spring}{1} \tag{php}{1} \tag{node.js}{2} \tag{docker}{1} \tag{git}{1}
 
 \end{minipage}\hspace{.5cm}
 \begin{minipage}[t]{0.3\textwidth}
@@ -87,16 +101,26 @@ Série scientifique. Obtenu avec mention ``très bien''.} & \\
 
 \end{minipage}
 
-\paragraph{Langues} anglais (courant, TOEIC 990), allemand (notions)
+% spacing hack
+\paragraph{}\,
 
+\noindent\begin{minipage}[t]{0.6\textwidth}
+
+\colsec{Langues}
+
+\begin{itemize}
+\setlength\itemsep{0pt}
+\item[$\bullet$] anglais : courant, TOEIC 990 (2018)
+\item[$\bullet$] allemand : notions
+\end{itemize}
+
+\end{minipage}\hspace{.5cm}
+\begin{minipage}[t]{0.3\textwidth}
 
 \colsec{Centres d'intérêt}
 
-\begin{itemize}
-\item[$\bullet$] jeux de société
-\item[$\bullet$] cuisine
-\item[$\bullet$] romans et nouvelles de science-fiction
-% \item[$\bullet$] rock, jazz
-\end{itemize}
+Jeux de société, cuisine, romans et nouvelles de science-fiction, rock, jazz...
+
+\end{minipage}
 
 \end{document}
