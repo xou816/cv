@@ -5,11 +5,6 @@
 \newpagecolor{bg}
 \pagestyle{empty}
 
-\begin{tikzpicture}[remember picture, overlay]
-        \fill[white, rounded corners=12, blur shadow={shadow xshift=0, shadow yshift=0, shadow blur radius=8, shadow opacity=5}] ($(current page.north west) + (.5, -5.5)$) rectangle ($(current page.south east) + (-.5, .5)$);
-\end{tikzpicture}
-
-
 \noindent\begin{minipage}[t]{0.3\textwidth}
 
 \textbf{\large Alexandre Trendel} \\
@@ -30,77 +25,88 @@ French Engineer with 3-year experience in web and mobile development.
 
 \end{minipage}
 
-\vspace{2cm}
+\vspace{1cm}
 
 \colsec{Experience and education}
 
-\begin{tikzpicture}
-\matrix[column sep={1em,between origins}, row sep=\lineskip]{
-%
-\evdate{nov 2019} & \eventred{oui3}{
-\textbf{iOS Developer, \evtech{}} \newline
-Development of the iOS application for OUI.sncf, the official European distribution channel of the French railways (SNCF).} & \\
+\begin{mainexpbox}[title=nov. 2019]
 
-\evdate{sept 2019} & \eventalt{graduation}{\bfseries Graduated from \ecn{}} & \\
+	\begin{minipage}[c]{20mm}
+	\roundedpic{resources/evtech.png}{12mm}
+	\end{minipage}
+	\begin{minipage}[c]{0.8\textwidth}
 
-\spaceghost & & \\
+	\textbf{iOS Developer, \evtech{}}
 
-\evdate{sept 2018} & & \eventblue{oui2}{\bfseries Full-stack web developer, \evtech{}} \\
+	Development of the \href{https://apps.apple.com/fr/app/oui-sncf-train-et-bus/id343889987}{\link{iOS application}} for OUI.sncf, the official European distribution channel of the French railways (SNCF).
 
-\evdate{may 2018} & & \eventblue{adfab}{
-\textbf{Project manager, \adfab{} (Canada)} 
-\newline Four-month internship in Montréal. Tasks : interaction with clients, team management, functional specifications, testing.
-} \\
+	Languages and tools used: Swift, Objective-C, Fastlane and Gitlab for continuous integration.
+	\end{minipage}
 
-\evdate{dec 2016} & & \eventblue{oui}{
-\textbf{Full-stack web developer, \evtech{}} 
-\newline Work-study contract. Tasks : full-stack web development as part of an agile team, in a complex technical environment.
-} \\
+\end{expbox}
 
-\evdate{sept 2016} & \eventalt{ecn}{
-\textbf{Engineering student, \ecn{}} 
-\newline A highly selective French school of engineering conferring a diploma equivalent to a Master’s Degree. Specialization in Applied Mathematics and Data Science.
-} & \\
+\begin{expbox}[title={dec. 2016, \faicon{clock-o} 3 year}]
 
-\evdate{sept 2014} & \eventalt{prepa}{
-\textbf{Student in Classes Préparatoires, Lycée Montesqieu}
-\newline A two-year intensive course in Mathematics, Physics, Automatics and Mechanics, preparing for the national entry examinations for French schools of engineering.
-} & \\
-%
-};
+	\begin{minipage}[c]{20mm}
+	\roundedpic{resources/evtech.png}{12mm}
+	\end{minipage}
+	\begin{minipage}[c]{0.8\textwidth}
 
-\connect{prepa}{ecn};
-\connect{ecn}{graduation};
-\connect{ecn}{oui};
-\connect{oui}{adfab};
-\connect{adfab}{oui2};
-\connect{oui2}{graduation};
-\connect{graduation}{oui3};
-\end{tikzpicture}
+	\textbf{Full-stack web developer, \evtech{}}
+
+	Full-stack web development as part of an agile team (work-study contract).
+
+	Developpement of REST webservices using Java 8 and the Spring framework, developpement of a React frontend.
+	\end{minipage}
+
+\end{expbox}
+
+\begin{expbox}[title={may 2018, \faicon{clock-o} 4 months}]
+
+	\begin{minipage}[c]{20mm}
+	\roundedpic{resources/adfab.png}{12mm}
+	\end{minipage}
+	\begin{minipage}[c]{0.8\textwidth}
+
+	\textbf{Project Manager, \adfab{} (Canada)} 
+
+	Technical project manager in a web design agency based in Montréal.
+
+	Regular meetings with clients, write-up of functional specifications.
+
+	Responsible for testing and deploying features.
+	\end{minipage}
+
+\end{expbox}
+
+\begin{expbox}[title={2016 -- 2019}]
+
+	\begin{minipage}[c]{20mm}
+	\roundedpic{resources/ecn.png}{12mm}
+	\end{minipage}
+	\begin{minipage}[c]{0.8\textwidth}
+
+	\textbf{Engineering student, \ecn{}} 
+
+	A highly selective French school of engineering conferring a diploma equivalent to a Master’s Degree. 
+
+	Specialization in Applied Mathematics and Data Science.
+	\end{minipage}
+
+\end{expbox}
 
 \colsec{Relevant skills}
 
-\noindent\begin{minipage}[t]{0.6\textwidth}
 
-\subsection*{Web and mobile development}
+\paragraph{Mobile development} 
 
 \tagcollection{solblue}
-\tag{swift}{2} \tag{javascript}{1} \tag{react}{1} \tag{java}{1} \tag{kotlin}{2} \tag{spring}{1} \tag{php}{1} \tag{node.js}{2} \tag{docker}{1} \tag{git}{1}
+\tag{Swift}{1} \tag{iOS}{1} \tag{Fastlane}{2}
 
-\end{minipage}\hspace{.5cm}
-\begin{minipage}[t]{0.3\textwidth}
+\paragraph{Web development}
+\tag{Javascript}{1} \tag{React}{1} \tag{Java 8}{1} \tag{Spring 2}{1} \tag{PHP}{1} \tag{Node.js}{2} \tag{Docker}{1}
 
-\subsection*{Data science}
-
-\tagcollection{solred}
-\tag{python}{1} \tag{R}{2} \tag{tensorflow}{2} \tag{scikit-learn}{2}
-
-\end{minipage}
-
-% spacing hack
-\paragraph{}\,
-
-\noindent\begin{minipage}[t]{0.6\textwidth}
+\paragraph{} Interested in free software (Linux user), maintaining personal open-source projects on my Github.
 
 \colsec{Languages}
 
@@ -111,13 +117,5 @@ Development of the iOS application for OUI.sncf, the official European distribut
 \item[$\bullet$] German: basic working knowledge
 \end{itemize}
 
-\end{minipage}\hspace{.5cm}
-\begin{minipage}[t]{0.3\textwidth}
-
-\colsec{Interests}
-
-Science Fiction, Rock and Jazz music, cooking, maths and board games.
-
-\end{minipage}
 
 \end{document}

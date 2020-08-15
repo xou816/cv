@@ -2,7 +2,7 @@
 \ProvidesClass{cv}
 
 % Class+geometry
-\LoadClass[11pt]{article}
+\LoadClass[a4paper,11pt]{article}
 \RequirePackage[top=1cm, left=1.8cm, right=1.8cm]{geometry}
 
 % Font
@@ -44,6 +44,16 @@
 \definecolor{lightgray}{gray}{0.9}
 
 % Logos
+\newcommand\roundedpic[2]{
+	\begin{tikzpicture}
+	\clip[rounded corners=4,draw=none] 
+	(0, 0) rectangle (#2, #2)
+	node[midway] {
+		\includegraphics[height=#2]{#1}
+	};
+	\end{tikzpicture}
+}
+
 \newcommand\evtech{\raisebox{-.3\baselineskip}{\includegraphics[height=\baselineskip]{resources/evtech.pdf}}}
 \newcommand\ouisncf{\includegraphics[height=0.9\baselineskip]{resources/ouisncf.pdf}}
 \newcommand\adfab{\raisebox{-.3\baselineskip}{\includegraphics[height=0.9\baselineskip]{resources/adfabn.pdf}}}
@@ -64,3 +74,59 @@
 	\end{tikzpicture}
 }}
 \newcommand\colsec[1]{\section*{\color{solred} #1}}
+
+% Boxes
+\RequirePackage{tcolorbox}
+
+\newcommand{\commonbox}{
+	enhanced,
+	interior hidden,
+	before skip=0mm,
+	after skip=3mm,
+	attach boxed title to top center={
+		%xshift=-2mm,
+		yshift=-2mm,
+	},
+	boxed title style={
+		skin=standard,
+		size=small,
+		colback=lightgray,
+		colframe=lightgray
+	},
+	fonttitle=\footnotesize\color{gray}
+}
+
+\tcbuselibrary{skins}
+\newtcolorbox{expbox}[1][]
+{
+	code={\pgfkeysalsofrom{\commonbox}},
+	frame style={
+		draw=none,
+		fill=white,
+		blur shadow={
+			shadow xshift=0, 
+			shadow yshift=0, 
+			shadow blur radius=4pt, 
+			shadow opacity=5
+		}
+	},
+	extrude left by=-2mm,
+	extrude right by=-2mm,
+	#1,
+}
+
+\newtcolorbox{mainexpbox}[1][]
+{
+	code={\pgfkeysalsofrom{\commonbox}},
+	frame style={
+		draw=none,
+		fill=white,
+		blur shadow={
+			shadow xshift=0, 
+			shadow yshift=0, 
+			shadow blur radius=6pt, 
+			shadow opacity=15
+		}
+	}, 
+	#1,
+}

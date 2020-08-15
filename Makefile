@@ -12,7 +12,7 @@ watchen: cv_en.tex
 
 install:
 	tlmgr update --self
-	tlmgr install lm xcolor xcolor-solarized pagecolor fontawesome xifthen ifmtarg pgf pgf-blur ec babel-french
+	tlmgr install lm xcolor xcolor-solarized pagecolor fontawesome xifthen ifmtarg pgf pgf-blur ec babel-french tcolorbox comment environ trimspaces etoolbox
 
 clean: 
 	latexmk -C

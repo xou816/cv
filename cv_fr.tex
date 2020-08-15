@@ -1,27 +1,13 @@
 \documentclass{cv}
+\usepackage{comment}
 
 \begin{document}
 
 \newpagecolor{bg}
 \pagestyle{empty}
 
-\begin{tikzpicture}[remember picture, overlay]
-        \fill[white, rounded corners=12, blur shadow={shadow xshift=0, shadow yshift=0, shadow blur radius=8, shadow opacity=5}] ($(current page.north west) + (.5, -5.5)$) rectangle ($(current page.south east) + (-.5, .5)$);
-\end{tikzpicture}
-
-
 \begin{minipage}[c]{0.6\textwidth}
-
-\begin{tikzpicture}
-\node[inner sep=0pt] at (0,0) {\includegraphics[width=3cm]{resources/photo.jpg}};
-\draw[bg, rounded corners=.3cm, line width=.25cm] 
-    (current bounding box.north west) -- 
-    (current bounding box.north east) --
-    (current bounding box.south east) --
-    (current bounding box.south west) -- cycle;
-\end{tikzpicture}
-% \includegraphics[width=3cm]{photo.jpg}
-
+\roundedpic{resources/pp.jpg}{28mm}
 \end{minipage}
 \begin{minipage}[c]{0.4\textwidth}
 
@@ -34,77 +20,88 @@
 
 \end{minipage}
 
-\vspace{1.2cm}
+\vspace{1cm}
 
 \colsec{Expérience et formation}
 
-\begin{tikzpicture}
-\matrix[column sep={1em,between origins}, row sep=\lineskip]{
-%
-\evdate{nov 2019} & \eventred{oui3}{
-\textbf{Ingénieur études et développement, \evtech{}} \newline
-Missions : développement de l'application iOS OUI.sncf.} & \\
+\begin{mainexpbox}[title=nov. 2019]
 
-\evdate{sept 2019} & \eventalt{graduation}{\bfseries Diplômé de \ecn{}} & \\
+	\begin{minipage}[c]{20mm}
+	\roundedpic{resources/evtech.png}{12mm}
+	\end{minipage}
+	\begin{minipage}[c]{0.8\textwidth}
 
-\spaceghost & & \\
+	\textbf{Ingénieur études et développement, \evtech{}} \newline
+	Développement de l'application iOS \href{https://apps.apple.com/fr/app/oui-sncf-train-et-bus/id343889987}{\link{OUI.sncf}} en Swift et Objective-C. 
 
-\evdate{sept 2018} & & \eventblue{oui2}{\bfseries Assistant ingénieur études et développement, \evtech{}} \\
+	Utilisation du pattern MVVM, intégration continue Fastlane et Gitlab CI.
+	\end{minipage}
 
-\evdate{mai 2018} & & \eventblue{adfab}{
-\textbf{Project Manager, \adfab{} (Canada)} 
-\newline Stage de 4 mois à Montréal. Suivi de projet et d'équipe, rédaction de spécifications fonctionnelles, tests fonctionnels.
-} \\
+\end{expbox}
 
-\evdate{déc 2016} & & \eventblue{oui}{
-\textbf{Assistant ingénieur études et développement, \evtech{}} 
-\newline Contrat d'alternance. Missions : développement full-stack au sein de l'équipe compte client.
-} \\
+\begin{expbox}[title={déc. 2016, \faicon{clock-o} 3 ans}]
 
-\evdate{sept 2016} & \eventalt{ecn}{
-\textbf{Ingénieur généraliste, \ecn{}} 
-\newline Spécialisation : mathématiques appliquées et sciences des données/Master ingénierie statistique à l'Université de Nantes.
-} & \\
+	\begin{minipage}[c]{20mm}
+	\roundedpic{resources/evtech.png}{12mm}
+	\end{minipage}
+	\begin{minipage}[c]{0.8\textwidth}
 
-\evdate{sept 2014} & \eventalt{prepa}{
-\textbf{Classe préparatoire MPSI/MP, Lycée Montesqieu} (Le Mans)
-\newline Projet de TIPE : développement d'un réseau de neurones artificiels pour la reconnaissance de caractères automatique.
-} & \\
-%
-};
+	\textbf{Assistant ingénieur études et développement, \evtech{}}
 
-\connect{prepa}{ecn};
-\connect{ecn}{graduation};
-\connect{ecn}{oui};
-\connect{oui}{adfab};
-\connect{adfab}{oui2};
-\connect{oui2}{graduation};
-\connect{graduation}{oui3};
-\end{tikzpicture}
+	Développement web full-stack au sein de la \textit{feature team} compte client.
+
+	Utilisation de Java 8 et du framework Spring, frontend React. Intégration continue via Jenkins.
+	\end{minipage}
+
+\end{expbox}
+
+\begin{expbox}[title={mai 2018, \faicon{clock-o} 4 mois}]
+
+	\begin{minipage}[c]{20mm}
+	\roundedpic{resources/adfab.png}{12mm}
+	\end{minipage}
+	\begin{minipage}[c]{0.8\textwidth}
+
+	\textbf{Project Manager, \adfab{} (Canada)} 
+
+	Chef de projet technique au sein d'une agence web à Montréal.
+
+	Échange régulier avec les clients, rédaction de spécifications fonctionnelles.
+
+	Test et déploiement des projets.
+	\end{minipage}
+
+\end{expbox}
+
+\begin{expbox}[title={2016 -- 2019}]
+
+	\begin{minipage}[c]{20mm}
+	\roundedpic{resources/ecn.png}{12mm}
+	\end{minipage}
+	\begin{minipage}[c]{0.8\textwidth}
+
+	\textbf{Élève ingénieur généraliste, \ecn{}} 
+
+	Parcours ingénieur généraliste en alternance.
+
+	Spécialisation : mathématiques appliquées et sciences des données/Master ingénierie statistique à l'Université de Nantes.
+	\end{minipage}
+
+\end{expbox}
+
 
 \colsec{Compétences}
 
-\noindent\begin{minipage}[t]{0.6\textwidth}
-
-\subsection*{Développement web et mobile}
+\paragraph{Développement mobile} 
 
 \tagcollection{solblue}
-\tag{swift}{2} \tag{javascript}{1} \tag{react}{1} \tag{java}{1} \tag{kotlin}{2} \tag{spring}{1} \tag{php}{1} \tag{node.js}{2} \tag{docker}{1} \tag{git}{1}
+\tag{Swift}{1} \tag{iOS}{1} \tag{Fastlane}{2}
 
-\end{minipage}\hspace{.5cm}
-\begin{minipage}[t]{0.3\textwidth}
+\paragraph{Développement web}
+\tag{Javascript}{1} \tag{React}{1} \tag{Java 8}{1} \tag{Spring 2}{1} \tag{PHP}{1} \tag{Node.js}{2} \tag{Docker}{1}
 
-\subsection*{Data science}
+\paragraph{} Intérêt pour le logiciel libre (utilisateur de Linux), publication de projets personnels en open-source sur Github.
 
-\tagcollection{solred}
-\tag{python}{1} \tag{R}{2} \tag{tensorflow}{2} \tag{scikit-learn}{2}
-
-\end{minipage}
-
-% spacing hack
-\paragraph{}\,
-
-\noindent\begin{minipage}[t]{0.6\textwidth}
 
 \colsec{Langues}
 
@@ -114,13 +111,9 @@ Missions : développement de l'application iOS OUI.sncf.} & \\
 \item[$\bullet$] allemand : notions
 \end{itemize}
 
-\end{minipage}\hspace{.5cm}
-\begin{minipage}[t]{0.3\textwidth}
 
-\colsec{Centres d'intérêt}
+%\colsec{Centres d'intérêt}
 
-Jeux de société, cuisine, romans et nouvelles de science-fiction, rock, jazz...
-
-\end{minipage}
+%Jeux de société, cuisine, romans et nouvelles de science-fiction, rock, jazz...
 
 \end{document}
