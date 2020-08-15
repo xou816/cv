@@ -24,6 +24,7 @@ jobs:
     
     - name: build
       uses: docker://atrendel/doxerlive:9-basic
+      run: make -C /github/workspace
 
     - name: release
       id: create_release
