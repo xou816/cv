@@ -12,7 +12,7 @@
 % Dependencies
 \RequirePackage[prefix=sol]{xcolor-solarized}
 \RequirePackage{graphicx}
-\RequirePackage{hyperref}
+\RequirePackage[hidelinks]{hyperref}
 \RequirePackage{pagecolor}
 \RequirePackage{fontawesome}
 \RequirePackage{xifthen}
@@ -21,22 +21,6 @@
 \RequirePackage{tikz}
 \usetikzlibrary{calc}
 \usetikzlibrary{shadows.blur}
-
-% Git like tree
-\newcommand\event[3]{\node[event, fill=#1] (#2) {}; \node[evtext] at (#2) {#3};}
-\newcommand\eventalt{\event{solbase1}}
-\newcommand\eventblue{\event{solblue}}
-\newcommand\eventred{\event{solred}}
-\newcommand\evdate[1]{\node[evdate] {\footnotesize #1};}
-\newcommand\ghost[1]{\coordinate (#1);}
-\newcommand\spaceghost{\node[] {\vspace{\lineskip}};}
-\newcommand\connect[2]{\path[connector] (#1) to[out=90,in=-90] (#2);}
-
-\tikzstyle{event}=[circle,fill=solblue,inner sep=0pt,minimum size=8pt]
-\tikzstyle{evtext}=[right,outer sep=1.5em,text width=0.8\textwidth]
-\tikzstyle{evdate}=[left]
-\tikzstyle{connector}=[draw=solbase1]
-\tikzstyle{every path}=[draw]
 
 % Colors
 \definecolor{bg}{HTML}{fafafa}
