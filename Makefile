@@ -1,13 +1,11 @@
 all: install build
 
 build-fr: cv_fr.template.tex
-	sed "s/#EMAIL/$${INPUT_EMAIL}/g" cv_fr.template.tex > cv_fr.tex
-	sed "s/#PHONE/$${INPUT_PHONE}/g" cv_fr.template.tex > cv_fr.tex
+	envsubst '$${INPUT_EMAIL} $${INPUT_PHONE}' < cv_fr.template.tex > cv_fr.tex
 	latexmk cv_fr.tex
 
 build-en: cv_en.template.tex
-	sed "s/#EMAIL/$${INPUT_EMAIL}/g" cv_fr.template.tex > cv_fr.tex
-	sed "s/#PHONE/$${INPUT_PHONE}/g" cv_en.template.tex > cv_en.tex
+	envsubst '$${INPUT_EMAIL} $${INPUT_PHONE}' < cv_en.template.tex > cv_en.tex
 	latexmk cv_en.tex
 
 build: build-en build-fr
