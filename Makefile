@@ -1,11 +1,11 @@
 all: install build
 
 build-fr: cv_fr.template.tex
-	envsubst '$${INPUT_EMAIL} $${INPUT_PHONE}' < cv_fr.template.tex > cv_fr.tex
+	sed 's/%\([A-Z][A-Z]*%\)/$$INPUT_\1/g' cv_fr.template.tex | envsubst '$${INPUT_EMAIL} $${INPUT_PHONE}' > cv_fr.tex
 	latexmk cv_fr.tex
 
 build-en: cv_en.template.tex
-	envsubst '$${INPUT_EMAIL} $${INPUT_PHONE}' < cv_en.template.tex > cv_en.tex
+	sed 's/%\([A-Z][A-Z]*%\)/$$INPUT_\1/g' cv_en.template.tex | envsubst '$${INPUT_EMAIL} $${INPUT_PHONE}' > cv_en.tex
 	latexmk cv_en.tex
 
 build: build-en build-fr
