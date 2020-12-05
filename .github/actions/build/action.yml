@@ -2,11 +2,11 @@ name: build
 inputs:
   email:
     default: 'test@example.org'
+  phone:
+    default: '+33 6 00 00 00 00'
 runs:
   using: 'docker'
   image: '../../../Dockerfile'
   env:
-    THEUID: 0
     INFO_EMAIL: $INPUT_EMAIL
-  args: 
-    - 'make build'
+    INFO_PHONE: $INPUT_PHONE
