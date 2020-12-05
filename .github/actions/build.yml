@@ -1,0 +1,9 @@
+name: build
+run:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    THEUID: 0
+    INFO_EMAIL: ${{ secrets.INFO_EMAIL }}
+  args: 
+    - 'make -C /github/workspace'

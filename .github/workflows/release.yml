@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: release
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -22,15 +22,7 @@ jobs:
     - name: checkout
       uses: actions/checkout@v2
     
-    - name: build
-      run:
-        using: 'docker'
-        image: 'Dockerfile'
-        env:
-          THEUID: 0
-          INFO_EMAIL: ${{ secrets.INFO_EMAIL }}
-        args: 
-          - 'make -C /github/workspace'
+    - uses: ./.github/actions/build
 
     - name: release
       id: create_release
