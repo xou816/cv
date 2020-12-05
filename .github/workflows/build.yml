@@ -23,3 +23,11 @@ jobs:
       with:
         email: ${{ secrets.INFO_EMAIL }}
         phone: ${{ secrets.INFO_PHONE }}
+
+    - name: artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: pdf_output
+        path: |
+          cv_fr.pdf
+          cv_en.pdf
