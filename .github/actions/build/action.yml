@@ -2,7 +2,7 @@ name: build
 inputs:
   email:
     default: 'test@example.org'
-run:
+runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
