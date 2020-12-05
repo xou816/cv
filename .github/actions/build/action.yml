@@ -4,7 +4,7 @@ inputs:
     default: 'test@example.org'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: '../../../Dockerfile'
   env:
     THEUID: 0
     INFO_EMAIL: $INPUT_EMAIL

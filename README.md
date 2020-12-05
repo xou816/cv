@@ -19,5 +19,5 @@ Watching:
 
 ```
 $ ./enter.sh
-$ make watchfr
+$ make watch-fr
 ```
