@@ -9,5 +9,3 @@ runs:
   image: '../../../Dockerfile'
   env:
     THEUID: 0
-    INFO_EMAIL: ${{ env.INPUT_EMAIL }}
-    INFO_PHONE: ${{ env.INPUT_PHONE }}

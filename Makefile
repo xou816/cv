@@ -1,11 +1,11 @@
 all: install build
 
 build-fr: cv_fr.template.tex
-	envsubst '$${INFO_EMAIL} $${INFO_PHONE}' < cv_fr.template.tex > cv_fr.tex
+	envsubst '$${INPUT_EMAIL} $${INPUT_PHONE}' < cv_fr.template.tex > cv_fr.tex
 	latexmk cv_fr.tex
 
 build-en: cv_en.template.tex
-	envsubst '$${INFO_EMAIL} $${INFO_PHONE}' < cv_en.template.tex > cv_en.tex
+	envsubst '$${INPUT_EMAIL} $${INPUT_PHONE}' < cv_en.template.tex > cv_en.tex
 	latexmk cv_en.tex
 
 build: build-en build-fr
