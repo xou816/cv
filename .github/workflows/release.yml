@@ -25,6 +25,7 @@ jobs:
     - uses: ./.github/actions/build
       with:
         email: ${{ secrets.INFO_EMAIL }}
+        phone: ${{ secrets.INFO_PHONE }}
 
     - name: release
       id: create_release

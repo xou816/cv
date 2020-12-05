@@ -8,5 +8,6 @@ runs:
   using: 'docker'
   image: '../../../Dockerfile'
   env:
+    THEUID: 0
     INFO_EMAIL: $INPUT_EMAIL
     INFO_PHONE: $INPUT_PHONE
