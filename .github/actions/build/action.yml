@@ -1,9 +1,12 @@
 name: build
+inputs:
+  email:
+    default: 'test@example.org'
 run:
   using: 'docker'
   image: 'Dockerfile'
   env:
     THEUID: 0
-    INFO_EMAIL: ${{ secrets.INFO_EMAIL }}
+    INFO_EMAIL: $INPUT_EMAIL
   args: 
     - 'make -C /github/workspace'
