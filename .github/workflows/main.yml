@@ -23,11 +23,14 @@ jobs:
       uses: actions/checkout@v2
     
     - name: build
-      uses: docker://atrendel/doxerlive:9-basic
-      env:
-        THEUID: 0
-      with:
-        args: make -C /github/workspace
+      runs:
+        using: 'docker'
+        image: 'Dockerfile'
+        env:
+          THEUID: 0
+          INFO_EMAIL: ${{ secrets.INFO_EMAIL }}
+        args: 
+          - 'make -C /github/workspace'
 
     - name: release
       id: create_release
