@@ -9,4 +9,4 @@ runs:
     THEUID: 0
     INFO_EMAIL: $INPUT_EMAIL
   args: 
-    - 'make -C /github/workspace'
+    - 'make build'
