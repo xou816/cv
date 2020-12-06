@@ -19,7 +19,7 @@ watch-en: cv_en.template.tex
 
 install:
 	tlmgr update --self
-	tlmgr install lm xcolor xcolor-solarized pagecolor fontawesome xifthen ifmtarg pgf pgf-blur ec babel-french tcolorbox comment environ trimspaces etoolbox everyshi
+	tlmgr install lm xcolor xcolor-solarized pagecolor fontawesome xifthen ifmtarg pgf pgf-blur ec babel-french tcolorbox comment environ trimspaces etoolbox everyshi enumitem
 
 clean: 
 	latexmk -C

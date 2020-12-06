@@ -3,11 +3,15 @@
 
 % Class+geometry
 \LoadClass[a4paper,11pt]{article}
-\RequirePackage[top=1cm, left=1.8cm, right=1.8cm]{geometry}
+\RequirePackage[top=1cm, left=12mm, right=12mm]{geometry}
 
 % Font
 \RequirePackage{lmodern}
 \renewcommand{\familydefault}{\sfdefault}
+
+% Lists
+\RequirePackage{enumitem}
+\setlist[itemize]{label=--,noitemsep,topsep=1pt,parsep=1pt,partopsep=1pt}
 
 % Dependencies
 \RequirePackage[prefix=sol]{xcolor-solarized}
@@ -24,30 +28,32 @@
 
 % Colors
 \definecolor{bg}{HTML}{fafafa}
+\definecolor{bg2}{HTML}{f0f0f0}
 \definecolor{gray}{gray}{0.6}
 \definecolor{lightgray}{gray}{0.9}
 
 % Logos
-\newcommand\roundedpic[2]{
-	\begin{tikzpicture}
-	\clip[rounded corners=4,draw=none] 
+\newcommand\roundedpic[2]{%
+	\strut\vspace*{-1.25\baselineskip}\newline%
+	\begin{tikzpicture}%
+	\clip[rounded corners=4,draw=lightgray] 
 	(0, 0) rectangle (#2, #2)
 	node[midway] {
 		\includegraphics[height=#2]{#1}
 	};
-	\end{tikzpicture}
+	\end{tikzpicture}%
 }
 
-\newcommand\evtech{\raisebox{-.3\baselineskip}{\includegraphics[height=\baselineskip]{resources/evtech.pdf}}}
+\newcommand\evtech{\raisebox{-.3\baselineskip}{\includegraphics[height=0.9\baselineskip]{resources/evtech.pdf}}}
 \newcommand\ouisncf{\includegraphics[height=0.9\baselineskip]{resources/ouisncf.pdf}}
-\newcommand\adfab{\raisebox{-.3\baselineskip}{\includegraphics[height=0.9\baselineskip]{resources/adfabn.pdf}}}
+\newcommand\adfab{\raisebox{-.2\baselineskip}{\includegraphics[height=0.8\baselineskip]{resources/adfabn.pdf}}}
 \newcommand\ecn{\raisebox{-.3\baselineskip}{\includegraphics[height=1.2\baselineskip]{resources/ecn.pdf}}}
 
 % Links
 \newcommand\link[1]{\underline{\smash{#1}}}
 
 % Tags
-\newcommand\thetagcolor{solred}
+\newcommand\thetagcolor{solblue}
 \newcommand\tagcollection[1]{\renewcommand{\thetagcolor}{#1}}
 \newcommand\theicon{star-full}
 \newcommand\tag[2]{%
@@ -55,8 +61,15 @@
 \raisebox{-.3\baselineskip}{%
 	\noindent\begin{tikzpicture}%
 	\node[fill=\thetagcolor, text height=1.5ex, minimum height=1.5ex, text=white, rounded corners] at (0, 0) {\footnotesize #1 \theicon};
-	\end{tikzpicture}
+	\end{tikzpicture}%
 }}
+\newcommand\otag[1]{%
+\raisebox{-1ex}{%
+	\noindent\begin{tikzpicture}%
+	\node[draw=\thetagcolor, text height=1ex, minimum height=1ex, text=\thetagcolor, rounded corners] at (0, 0) {\footnotesize\vphantom{Ag}#1};
+	\end{tikzpicture}%
+}}
+
 \newcommand\colsec[1]{\section*{\color{solred} #1}}
 
 % Boxes
@@ -64,11 +77,13 @@
 
 \newcommand{\commonbox}{
 	enhanced,
+	left=0pt,
+	right=0pt,
 	interior hidden,
 	before skip=0mm,
 	after skip=3mm,
 	attach boxed title to top center={
-		%xshift=-2mm,
+		%xshift=2mm,
 		yshift=-2mm,
 	},
 	boxed title style={
@@ -94,8 +109,6 @@
 			shadow opacity=5
 		}
 	},
-	extrude left by=-2mm,
-	extrude right by=-2mm,
 	#1,
 }
 
@@ -109,8 +122,10 @@
 			shadow xshift=0, 
 			shadow yshift=0, 
 			shadow blur radius=6pt, 
-			shadow opacity=15
+			shadow opacity=12
 		}
 	}, 
+	extrude left by=2mm,
+	extrude right by=2mm,
 	#1,
 }
