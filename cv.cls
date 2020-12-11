@@ -36,7 +36,7 @@
 \newcommand\roundedpic[2]{%
 	\strut\vspace*{-1.25\baselineskip}\newline%
 	\begin{tikzpicture}%
-	\clip[rounded corners=4,draw=lightgray] 
+	\clip[rounded corners=4, postaction={draw=gray}]
 	(0, 0) rectangle (#2, #2)
 	node[midway] {
 		\includegraphics[height=#2]{#1}
