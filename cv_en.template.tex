@@ -5,91 +5,104 @@
 \newpagecolor{bg}
 \pagestyle{empty}
 
-\noindent\begin{minipage}[t]{0.3\textwidth}
+\noindent\begin{minipage}[c]{\textwidth}
+	\large
+	\textbf{Alexandre Trendel}
 
-\textbf{\large Alexandre Trendel} \\
-Nantes, France \\
-\faicon{phone} %PHONE%
-\\
-\faicon{envelope} \href{mailto:%EMAIL%
-}{\link{%EMAIL%
-}} \\
-\faicon{github} \href{https://github.com/xou816}{\link{https://github.com/xou816}}
+	French Software Engineer with 4-year experience in web and mobile development.
 
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.5\textwidth}
-
-\large
-
-French Engineer with 3-year experience in web and mobile development.
-
-\begin{center}\color{solred}\rule{2cm}{1pt}\end{center}
+	\color{solred}\rule{2cm}{1pt}
 
 \end{minipage}
 
 \vspace{1cm}
 
+
+\noindent\begin{minipage}[t]{.65\textwidth}
+
 \colsec{Experience and education}
+
+\newlength{\logoboxwidth}
+\setlength{\logoboxwidth}{20mm}
 
 \begin{mainexpbox}[title=nov. 2019 -- today]
 
-	\begin{minipage}[c]{20mm}
+	\begin{minipage}[t]{\logoboxwidth}%
+	\centering
 	\roundedpic{resources/evtech.png}{12mm}
 	\end{minipage}
-	\begin{minipage}[c]{0.8\textwidth}
+	\begin{minipage}[t]{0.8\textwidth}
 
-	\textbf{iOS Developer, \evtech{}}
+	\textbf{Software Engineer, \evtech{}}\smallskip
 
-	Development of the \href{https://apps.apple.com/fr/app/oui-sncf-train-et-bus/id343889987}{\link{iOS application}} for OUI.sncf, the official European distribution channel of the French railways (SNCF).
+	Development of the \href{https://apps.apple.com/fr/app/oui-sncf-train-et-bus/id343889987}{\link{Oui.sncf iOS app}}.  Oui.sncf is a subsidiary of SNCF (France's railway company) selling train and bus passes in France and Europe.
 
-	Languages and tools used: Swift, Objective-C, CocoaPods, Fastlane and Gitlab.
+	\begin{itemize}
+		\item iOS development in Swift 5 and Obj-C
+		\item development of a custom declarative UI framework
+		\item UI test automation with XCTest
+		\item continuous integration through Gitlab CI and Fastlane
+		\item MVVM design pattern, RxSwift
+		\item agile team (kanban)
+	\end{itemize}
 	\end{minipage}
 
 \end{mainexpbox}
 
 \begin{expbox}[title={dec. 2016, \faicon{clock-o} 3 years}]
 
-	\begin{minipage}[c]{20mm}
+	\begin{minipage}[t]{\logoboxwidth}%
+	\centering
 	\roundedpic{resources/evtech.png}{12mm}
 	\end{minipage}
-	\begin{minipage}[c]{0.8\textwidth}
+	\begin{minipage}[t]{0.8\textwidth}
 
-	\textbf{Full-stack web developer, \evtech{}}
+	\textbf{Software Engineering Assistant, \evtech{}}\smallskip
 
-	Full-stack web development as part of an agile team (work-study contract).
+	\textit{Work-study contract.} 
 
-	Developpement of REST webservices using Java 8 and the Spring framework, developpement of a React frontend.
+	Full-stack web development for Oui.sncf.
+
+	\begin{itemize}
+		\item reactive server application development (Java, Spring framework)
+		\item frontend development using React and ES6
+		\item continuous integration using Jenkins and Docker
+		\end{itemize}
 	\end{minipage}
 
 \end{expbox}
 
 \begin{expbox}[title={may 2018, \faicon{clock-o} 4 months}]
 
-	\begin{minipage}[c]{20mm}
+	\begin{minipage}[t]{\logoboxwidth}%
+	\centering
 	\roundedpic{resources/adfab.png}{12mm}
 	\end{minipage}
-	\begin{minipage}[c]{0.8\textwidth}
+	\begin{minipage}[t]{0.8\textwidth}
 
-	\textbf{Project Manager, \adfab{} (Canada)} 
+	\textbf{Project Manager Intern, \adfab{} (Montréal)}\smallskip
 
-	Technical project manager in a web design agency based in Montréal.
+	Technical project manager in a 12-person IT consulting company in Montréal.
 
-	Regular meetings with clients, write-up of functional specifications.
-
-	Responsible for testing and deploying features.
+	\begin{itemize}
+		\item responsible for meeting with clients
+		\item technical and functional specification
+		\item UI and UX testing
+		\item deployment to staging and production environments
+		\end{itemize}
 	\end{minipage}
 
 \end{expbox}
 
 \begin{expbox}[title={2016 -- 2019}]
 
-	\begin{minipage}[c]{20mm}
+	\begin{minipage}[t]{\logoboxwidth}%
+	\centering
 	\roundedpic{resources/ecn.png}{12mm}
 	\end{minipage}
-	\begin{minipage}[c]{0.8\textwidth}
+	\begin{minipage}[t]{0.8\textwidth}
 
-	\textbf{Engineering student, \ecn{}} 
+	\textbf{Engineering student, \ecn{}}\smallskip
 
 	A highly selective French school of engineering conferring a diploma equivalent to a Master’s Degree. 
 
@@ -98,26 +111,50 @@ French Engineer with 3-year experience in web and mobile development.
 
 \end{expbox}
 
-\colsec{Relevant skills}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.28\textwidth}%
 
-\tagcollection{solblue}
+	\colsec{Contact}
 
-\paragraph{Mobile development} 
-\tag{Swift}{1} \tag{iOS}{1} \tag{CocoaPods}{2} \tag{Fastlane}{2}
+	\faicon{map-marker} Nantes, France
+	\newline\faicon{phone} %PHONE%
+	\newline\faicon{envelope} \href{mailto:%EMAIL%
+	}{\link{%EMAIL%
+	}}%
+	\newline\faicon{github} \href{https://github.com/xou816}{\link{github.com/xou816}} 
 
-\paragraph{Web development}
-\tag{Javascript}{1} \tag{React}{1} \tag{Java 8}{1} \tag{Spring 2}{1} \tag{PHP}{1} \tag{Node.js}{2} \tag{Docker}{1}
 
-\paragraph{} Interested in free software (Linux user), maintaining personal open-source projects on my Github.
+	\colsec{Relevant skills}
 
-\colsec{Languages}
+	Full-stack web and mobile development.
 
-\begin{itemize}
-\setlength\itemsep{0pt}
-\item[$\bullet$] French: native speaker
-\item[$\bullet$] English: fairly fluent, TOEIC 990 (2018)
-\item[$\bullet$] German: basic working knowledge
-\end{itemize}
+	\begin{center}
+		\otag{Swift} \otag{CocoaPods} \otag{Fastlane}
+		\otag{Rust}
+		\otag{Javascript} \otag{React} 
+		\otag{Java} \otag{Spring} 
+		\otag{PHP} \otag{Node.js} 
+		\otag{Docker} \otag{git} \otag{Unix}
+	\end{center}
+
+	\colsec{Personal projects}
+	\raggedright
+	\paragraph{\faicon{github} spot} Native Spotify client for Linux, using Gtk and Rust
+	\paragraph{\faicon{github} VerifiKit} Swift package for declarative data validation
+	\paragraph{\faicon{github} edt-ecn} PWA (Node.js, React) for Centrale Nantes students
+
+
+	\colsec{Languages}
+
+	\begin{itemize}
+	\setlength\itemsep{0pt}
+	\item French: native speaker
+	\item English: fairly fluent, TOEIC 990 (2018)
+	\item German: basic working knowledge
+	\end{itemize}
+		
+\end{minipage}
 
 
 \end{document}

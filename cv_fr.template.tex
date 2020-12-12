@@ -14,14 +14,15 @@
 
 	\color{solred}\rule{2cm}{1pt}
 
-\end{minipage}
+\end{minipage}%\begin{comment}
 \hfill
 \begin{minipage}[c]{0.28\textwidth}%
 
 	\centering
 	\roundedpic{resources/pp.jpg}{24mm}
 
-\end{minipage}
+\end{minipage}	
+%\end{comment}
 
 \vspace{1cm}
 
@@ -39,7 +40,7 @@
 	\roundedpic{resources/evtech.png}{12mm}
 	\end{minipage}
 	\begin{minipage}[t]{0.8\textwidth}
-	\textbf{Ingénieur études et développement, \evtech{}}
+	\textbf{Ingénieur études et développement, \evtech{}}\smallskip
 
 	Développement de l'application iOS \href{https://apps.apple.com/fr/app/oui-sncf-train-et-bus/id343889987}{\link{Oui.sncf}}.
 
@@ -49,6 +50,7 @@
 	\item automatisation de tests UI via XCTest
 	\item intégration continue Gitlab CI et Fastlane
 	\item design pattern MVVM + RxSwift
+	\item méthodes agiles (kanban)
 	\end{itemize}
 	\end{minipage}
 
@@ -61,15 +63,15 @@
 	\roundedpic{resources/evtech.png}{12mm}
 	\end{minipage}
 	\begin{minipage}[t]{0.8\textwidth}
-	\textbf{Assistant ingénieur études et dév., \evtech{}}
+	\textbf{Assistant ingénieur études et dév., \evtech{}}\smallskip
 
 	\textit{Contrat d'alternance.} 
 	
 	Développement web full-stack du compte client Oui.sncf.
 
 	\begin{itemize}
-	\item développement backend en Java 8 framework Spring
-	\item développement frontend React/Webpack
+	\item développement backend avec Spring (Java)
+	\item développement frontend React et ES6
 	\item intégration continue Jenkins
 	\end{itemize}
 	\end{minipage}
@@ -83,9 +85,9 @@
 	\roundedpic{resources/adfab.png}{12mm}
 	\end{minipage}
 	\begin{minipage}[t]{0.8\textwidth}
-	\textbf{Project Manager Intern, \adfab{} (Montréal)} 
+	\textbf{Project Manager Intern, \adfab{} (Montréal)}\smallskip
 
-	Chef de projet technique au sein d'une ESN.
+	Chef de projet technique au sein d'une très petite ESN.
 
 	\begin{itemize}
 	\item recueil du besoin client
@@ -104,7 +106,7 @@
 	\roundedpic{resources/ecn.png}{12mm}
 	\end{minipage}
 	\begin{minipage}[t]{0.8\textwidth}
-	\textbf{Élève ingénieur généraliste, \ecn{}} 
+	\textbf{Élève ingénieur généraliste, \ecn{}}\smallskip
 
 	Ingénieur généraliste en alternance.
 
@@ -122,9 +124,9 @@
 	\colsec{Coordonnées}
 
 	\faicon{map-marker} Nantes, France
-	\newline\faicon{phone} 00 00 00 00 00%PHONE%
+	\newline\faicon{phone} %PHONE%
 	\newline\faicon{envelope} \href{mailto:%EMAIL%
-	}{\link{fake@foo.bar%EMAIL%
+	}{\link{%EMAIL%
 	}}%
 	\newline\faicon{github} \href{https://github.com/xou816}{\link{github.com/xou816}} 
 

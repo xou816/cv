@@ -11,7 +11,7 @@
 
 % Lists
 \RequirePackage{enumitem}
-\setlist[itemize]{label=--,left=0.5em,noitemsep,topsep=1pt,parsep=1pt,partopsep=1pt}
+\setlist[itemize]{label=--,left=0.5em,noitemsep,topsep=1ex,parsep=1pt,partopsep=1pt}
 
 % Dependencies
 \RequirePackage[prefix=sol]{xcolor-solarized}
