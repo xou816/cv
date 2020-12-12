@@ -4,7 +4,7 @@ Continuously integrated curriculum vitae ;)
 
 [Latest tagged build](https://github.com/xou816/cv/releases/latest)
 
-![Build status](https://github.com/xou816/cv/workflows/CI/badge.svg)
+![build](https://github.com/xou816/cv/workflows/build/badge.svg)
 
 ## Building locally
 

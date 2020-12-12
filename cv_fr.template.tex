@@ -6,112 +6,157 @@
 \newpagecolor{bg}
 \pagestyle{empty}
 
-\begin{minipage}[c]{0.6\textwidth}
-\roundedpic{resources/pp.jpg}{28mm}
-\end{minipage}
-\begin{minipage}[c]{0.4\textwidth}
+\noindent\begin{minipage}[c]{.65\textwidth}
+	\large
+	\textbf{Alexandre Trendel}
 
-\textbf{\large Alexandre Trendel} \\
-44000 Nantes \\
-\faicon{phone} %PHONE%
-\\
-\faicon{envelope} \href{mailto:%EMAIL%
-}{\link{%EMAIL%
-}} \\
-\faicon{github} \href{https://github.com/xou816}{\link{https://github.com/xou816}} \\
+	Ingénieur en développement web et mobile, 4 ans d'expérience
 
-\end{minipage}
+	\color{solred}\rule{2cm}{1pt}
+
+\end{minipage}%\begin{comment}
+\hfill
+\begin{minipage}[c]{0.28\textwidth}%
+
+	\centering
+	\roundedpic{resources/pp.jpg}{24mm}
+
+\end{minipage}	
+%\end{comment}
 
 \vspace{1cm}
 
+\noindent\begin{minipage}[t]{.65\textwidth}
+
 \colsec{Expérience et formation}
+
+\newlength{\logoboxwidth}
+\setlength{\logoboxwidth}{20mm}
 
 \begin{mainexpbox}[title=nov. 2019 -- aujourd'hui]
 
-	\begin{minipage}[c]{20mm}
+	\begin{minipage}[t]{\logoboxwidth}%
+	\centering
 	\roundedpic{resources/evtech.png}{12mm}
 	\end{minipage}
-	\begin{minipage}[c]{0.8\textwidth}
+	\begin{minipage}[t]{0.8\textwidth}
+	\textbf{Ingénieur études et développement, \evtech{}}\smallskip
 
-	\textbf{Ingénieur études et développement, \evtech{}} \newline
-	Développement de l'application iOS \href{https://apps.apple.com/fr/app/oui-sncf-train-et-bus/id343889987}{\link{OUI.sncf}} en Swift et Objective-C. 
+	Développement de l'application iOS \href{https://apps.apple.com/fr/app/oui-sncf-train-et-bus/id343889987}{\link{Oui.sncf}}.
 
-	Utilisation du pattern MVVM, intégration continue Fastlane et Gitlab CI.
+	\begin{itemize}
+	\item développement iOS en Swift 5 et Obj-C
+	\item développement d'un framework UI déclaratif
+	\item automatisation de tests UI via XCTest
+	\item intégration continue Gitlab CI et Fastlane
+	\item design pattern MVVM + RxSwift
+	\item méthodes agiles (kanban)
+	\end{itemize}
 	\end{minipage}
 
 \end{mainexpbox}
 
 \begin{expbox}[title={déc. 2016, \faicon{clock-o} 3 ans}]
 
-	\begin{minipage}[c]{20mm}
+	\begin{minipage}[t]{\logoboxwidth}
+	\centering
 	\roundedpic{resources/evtech.png}{12mm}
 	\end{minipage}
-	\begin{minipage}[c]{0.8\textwidth}
+	\begin{minipage}[t]{0.8\textwidth}
+	\textbf{Assistant ingénieur études et dév., \evtech{}}\smallskip
 
-	\textbf{Assistant ingénieur études et développement, \evtech{}}
+	\textit{Contrat d'alternance.} 
+	
+	Développement web full-stack du compte client Oui.sncf.
 
-	Développement web full-stack au sein de la \textit{feature team} compte client.
-
-	Utilisation de Java 8 et du framework Spring, frontend React. Intégration continue via Jenkins.
+	\begin{itemize}
+	\item développement backend avec Spring (Java)
+	\item développement frontend React et ES6
+	\item intégration continue Jenkins
+	\end{itemize}
 	\end{minipage}
 
 \end{expbox}
 
 \begin{expbox}[title={mai 2018, \faicon{clock-o} 4 mois}]
 
-	\begin{minipage}[c]{20mm}
+	\begin{minipage}[t]{\logoboxwidth}
+	\centering
 	\roundedpic{resources/adfab.png}{12mm}
 	\end{minipage}
-	\begin{minipage}[c]{0.8\textwidth}
+	\begin{minipage}[t]{0.8\textwidth}
+	\textbf{Project Manager Intern, \adfab{} (Montréal)}\smallskip
 
-	\textbf{Project Manager, \adfab{} (Canada)} 
+	Chef de projet technique au sein d'une très petite ESN.
 
-	Chef de projet technique au sein d'une agence web à Montréal.
-
-	Échange régulier avec les clients, rédaction de spécifications fonctionnelles.
-
-	Test et déploiement des projets.
+	\begin{itemize}
+	\item recueil du besoin client
+	\item spécification fonctionnelle et technique
+	\item test UI/UX
+	\item déploiement applicatif
+	\end{itemize}
 	\end{minipage}
 
 \end{expbox}
 
 \begin{expbox}[title={2016 -- 2019}]
 
-	\begin{minipage}[c]{20mm}
+	\begin{minipage}[t]{\logoboxwidth}
+	\centering
 	\roundedpic{resources/ecn.png}{12mm}
 	\end{minipage}
-	\begin{minipage}[c]{0.8\textwidth}
+	\begin{minipage}[t]{0.8\textwidth}
+	\textbf{Élève ingénieur généraliste, \ecn{}}\smallskip
 
-	\textbf{Élève ingénieur généraliste, \ecn{}} 
+	Ingénieur généraliste en alternance.
 
-	Parcours ingénieur généraliste en alternance.
-
-	Spécialisation : mathématiques appliquées et sciences des données/Master ingénierie statistique à l'Université de Nantes.
+	\begin{itemize}
+	\item tronc commun ingénieur
+	\item spécialisation maths appliquées/sciences des données\\ (via l'Université de Nantes)
+	\end{itemize}
 	\end{minipage}
 
 \end{expbox}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.28\textwidth}%
 
+	\colsec{Coordonnées}
 
-\colsec{Compétences}
+	\faicon{map-marker} Nantes, France
+	\newline\faicon{phone} %PHONE%
+	\newline\faicon{envelope} \href{mailto:%EMAIL%
+	}{\link{%EMAIL%
+	}}%
+	\newline\faicon{github} \href{https://github.com/xou816}{\link{github.com/xou816}} 
 
-\tagcollection{solblue}
+	\colsec{Compétences}
 
-\paragraph{Développement mobile} 
-\tag{Swift}{1} \tag{iOS}{1} \tag{CocoaPods}{2} \tag{Fastlane}{2}
+	Développement web full-stack, développement mobile.
 
-\paragraph{Développement web}
-\tag{Javascript}{1} \tag{React}{1} \tag{Java 8}{1} \tag{Spring 2}{1} \tag{PHP}{1} \tag{Node.js}{2} \tag{Docker}{1}
+	\begin{center}
+	\otag{Swift} \otag{CocoaPods} \otag{Fastlane}
+	\otag{Rust}
+	\otag{Javascript} \otag{React} 
+	\otag{Java} \otag{Spring} 
+	\otag{PHP} \otag{Node.js} 
+	\otag{Docker} \otag{git} \otag{Unix}
+	\end{center}
 
-\paragraph{} Intérêt pour le logiciel libre (utilisateur de Linux), publication de projets personnels en open-source sur Github.
+	\colsec{Projets open-source}
+	\raggedright
+	\paragraph{\faicon{github} spot} Client Spotify en Gtk et Rust pour Linux
+	\paragraph{\faicon{github} VerifiKit} Package Swift aidant à la validation de données
+	\paragraph{\faicon{github} edt-ecn} PWA (Node.js et React) pour consulter l'emploi du temps des étudiants de Centrale Nantes
 
+	\colsec{Langues}
 
-\colsec{Langues}
-
-\begin{itemize}
-\setlength\itemsep{0pt}
-\item[$\bullet$] anglais : courant, TOEIC 990 (2018)
-\item[$\bullet$] allemand : notions
-\end{itemize}
+	\begin{itemize}
+	\item anglais : courant, TOEIC 990 (2018)
+	\item allemand : notions
+	\end{itemize}
+		
+\end{minipage}
 
 
 %\colsec{Centres d'intérêt}
