@@ -3,7 +3,7 @@
 
 % Class+geometry
 \LoadClass[a4paper,11pt]{article}
-\RequirePackage[top=1cm, left=12mm, right=12mm]{geometry}
+\RequirePackage[top=15mm, left=12mm, right=12mm]{geometry}
 
 % Font
 \RequirePackage{lmodern}
@@ -11,7 +11,7 @@
 
 % Lists
 \RequirePackage{enumitem}
-\setlist[itemize]{label=--,noitemsep,topsep=1pt,parsep=1pt,partopsep=1pt}
+\setlist[itemize]{label=--,left=0.5em,noitemsep,topsep=1pt,parsep=1pt,partopsep=1pt}
 
 % Dependencies
 \RequirePackage[prefix=sol]{xcolor-solarized}
@@ -66,7 +66,7 @@
 \newcommand\otag[1]{%
 \raisebox{-1ex}{%
 	\noindent\begin{tikzpicture}%
-	\node[draw=\thetagcolor, text height=1ex, minimum height=1ex, text=\thetagcolor, rounded corners] at (0, 0) {\footnotesize\vphantom{Ag}#1};
+	\node[fill=\thetagcolor, text height=1.5ex, minimum height=1.5ex, text=white, rounded corners] at (0, 0) {\vphantom{Ag}#1};
 	\end{tikzpicture}%
 }}
 
@@ -80,8 +80,8 @@
 	left=0pt,
 	right=0pt,
 	interior hidden,
-	before skip=0mm,
-	after skip=3mm,
+	before skip=5mm,
+	after skip=5mm,
 	attach boxed title to top center={
 		%xshift=2mm,
 		yshift=-2mm,

@@ -3,14 +3,27 @@
 
 \begin{document}
 
-\begin{comment}
-\noindent\begin{tikzpicture}[remember picture,overlay]
-	\path [fill=solbase2, rounded corners=10] ($(current page.north) + (4.2,-1) $) rectangle (current page.south east);
-\end{tikzpicture}
-\end{comment}
-
 \newpagecolor{bg}
 \pagestyle{empty}
+
+\noindent\begin{minipage}[c]{.65\textwidth}
+	\large
+	\textbf{Alexandre Trendel}
+
+	Ingénieur en développement web et mobile, 4 ans d'expérience
+
+	\color{solred}\rule{2cm}{1pt}
+
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.28\textwidth}%
+
+	\centering
+	\roundedpic{resources/pp.jpg}{24mm}
+
+\end{minipage}
+
+\vspace{1cm}
 
 \noindent\begin{minipage}[t]{.65\textwidth}
 
@@ -28,14 +41,14 @@
 	\begin{minipage}[t]{0.8\textwidth}
 	\textbf{Ingénieur études et développement, \evtech{}}
 
-	Développement de l'application iOS \href{https://apps.apple.com/fr/app/oui-sncf-train-et-bus/id343889987}{\link{OUI.sncf}}.
+	Développement de l'application iOS \href{https://apps.apple.com/fr/app/oui-sncf-train-et-bus/id343889987}{\link{Oui.sncf}}.
 
 	\begin{itemize}
-	\item développement iOS/WatchOS en Swift 5 et Obj-C
+	\item développement iOS en Swift 5 et Obj-C
 	\item développement d'un framework UI déclaratif
 	\item automatisation de tests UI via XCTest
 	\item intégration continue Gitlab CI et Fastlane
-	\item design pattern MVVM
+	\item design pattern MVVM + RxSwift
 	\end{itemize}
 	\end{minipage}
 
@@ -50,6 +63,8 @@
 	\begin{minipage}[t]{0.8\textwidth}
 	\textbf{Assistant ingénieur études et dév., \evtech{}}
 
+	\textit{Contrat d'alternance.} 
+	
 	Développement web full-stack du compte client Oui.sncf.
 
 	\begin{itemize}
@@ -73,7 +88,7 @@
 	Chef de projet technique au sein d'une ESN.
 
 	\begin{itemize}
-	\item récolte du besoin client
+	\item recueil du besoin client
 	\item spécification fonctionnelle et technique
 	\item test UI/UX
 	\item déploiement applicatif
@@ -104,38 +119,42 @@
 \hfill
 \begin{minipage}[t]{0.28\textwidth}%
 
-	\begin{center}
-	\roundedpic{resources/pp.jpg}{24mm}
+	\colsec{Coordonnées}
 
-	\textbf{\large Alexandre Trendel}
+	\faicon{map-marker} Nantes, France
+	\newline\faicon{phone} 00 00 00 00 00%PHONE%
+	\newline\faicon{envelope} \href{mailto:%EMAIL%
+	}{\link{fake@foo.bar%EMAIL%
+	}}%
+	\newline\faicon{github} \href{https://github.com/xou816}{\link{github.com/xou816}} 
+
+	\colsec{Compétences}
+
+	Développement web full-stack, développement mobile.
+
+	\begin{center}
+	\otag{Swift} \otag{CocoaPods} \otag{Fastlane}
+	\otag{Rust}
+	\otag{Javascript} \otag{React} 
+	\otag{Java} \otag{Spring} 
+	\otag{PHP} \otag{Node.js} 
+	\otag{Docker} \otag{git} \otag{Unix}
 	\end{center}
 
-	44000 Nantes
-	\newline\faicon{phone}%PHONE%
-	\newline\faicon{envelope} \href{mailto:%EMAIL%
-	}{\link{%EMAIL%
-	}}%
-	\newline\faicon{github} \href{https://github.com/xou816}{\link{https://github.com/xou816}} 
-	
+	\colsec{Projets open-source}
+	\raggedright
+	\paragraph{\faicon{github} spot} Client Spotify en Gtk et Rust pour Linux
+	\paragraph{\faicon{github} VerifiKit} Package Swift aidant à la validation de données
+	\paragraph{\faicon{github} edt-ecn} PWA (Node.js et React) pour consulter l'emploi du temps des étudiants de Centrale Nantes
+
+	\colsec{Langues}
+
+	\begin{itemize}
+	\item anglais : courant, TOEIC 990 (2018)
+	\item allemand : notions
+	\end{itemize}
+		
 \end{minipage}
-
-\colsec{Compétences}
-
-\paragraph{Développement mobile} 
-\tag{Swift}{1} \tag{iOS}{1} \tag{CocoaPods}{2} \tag{Fastlane}{2}
-
-\paragraph{Développement web}
-\tag{Javascript}{1} \tag{React}{1} \tag{Java 8}{1} \tag{Spring 2}{1} \tag{PHP}{1} \tag{Node.js}{2} \tag{Docker}{1}
-
-\paragraph{} Intérêt pour le logiciel libre (utilisateur de Linux), publication de projets personnels en open-source sur Github.
-
-
-\colsec{Langues}
-
-\begin{itemize}
-\item anglais : courant, TOEIC 990 (2018)
-\item allemand : notions
-\end{itemize}
 
 
 %\colsec{Centres d'intérêt}
