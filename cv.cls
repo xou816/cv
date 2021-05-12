@@ -3,7 +3,7 @@
 
 % Class+geometry
 \LoadClass[a4paper,11pt]{article}
-\RequirePackage[top=15mm, left=12mm, right=12mm]{geometry}
+\RequirePackage[top=20mm, left=20mm, right=20mm, bottom=20mm]{geometry}
 
 % Font
 \RequirePackage{lmodern}
@@ -12,6 +12,7 @@
 % Lists
 \RequirePackage{enumitem}
 \setlist[itemize]{label=--,left=0.5em,noitemsep,topsep=1ex,parsep=1pt,partopsep=1pt}
+\setlist[description]{left=0.5em,noitemsep,topsep=1ex,parsep=1pt,partopsep=1pt}
 
 % Dependencies
 \RequirePackage[prefix=sol]{xcolor-solarized}
@@ -53,20 +54,26 @@
 \newcommand\link[1]{\underline{\smash{#1}}}
 
 % Tags
-\newcommand\thetagcolor{solblue}
+\newcommand\thetagcolor{solviolet}
 \newcommand\tagcollection[1]{\renewcommand{\thetagcolor}{#1}}
-\newcommand\theicon{star-full}
-\newcommand\tag[2]{%
-\renewcommand\theicon{\ifthenelse{\equal{#2}{1}}{\faicon{star}}{\faicon{star-half-o}}}%
-\raisebox{-.3\baselineskip}{%
-	\noindent\begin{tikzpicture}%
-	\node[fill=\thetagcolor, text height=1.5ex, minimum height=1.5ex, text=white, rounded corners] at (0, 0) {\footnotesize #1 \theicon};
-	\end{tikzpicture}%
-}}
+
+\newcounter{starcount}
+\newcommand\starrate[1]{
+	\makeatletter
+	\setcounter{starcount}{0}
+	\@whilenum\value{starcount}<5\do{%
+		\ifthenelse{\value{starcount}<#1}
+			{\faicon{star}}
+			{\faicon{star-o}}%
+		\stepcounter{starcount}\,%
+	}
+	\makeatother
+}
+
 \newcommand\otag[1]{%
 \raisebox{-1ex}{%
 	\noindent\begin{tikzpicture}%
-	\node[fill=\thetagcolor, text height=1.5ex, minimum height=1.5ex, text=white, rounded corners] at (0, 0) {\vphantom{Ag}#1};
+	\node[draw=\thetagcolor, text height=1ex, minimum height=1ex, text=\thetagcolor, rounded corners] at (0, 0) {\small\vphantom{Ag}#1};
 	\end{tikzpicture}%
 }}
 
@@ -78,7 +85,7 @@
 \newlength{\logoboxwidth}
 \setlength{\logoboxwidth}{16mm}
 
-\newcommand\experience[5][default]{
+\newcommand\experience[6][default]{
 	\ifthenelse{\equal{main}{#1}}
 		{\def\boxkind{mainexpbox}}
 		{\def\boxkind{expbox}}
@@ -88,10 +95,10 @@
 		\roundedpic{#3}{12mm}
 		\end{minipage}
 		\begin{minipage}[c]{0.8\textwidth}
-		\textbf{#4}
+		\large\textbf{#4}\\#5
 		\end{minipage}
 		\medskip
-		#5
+		#6
 	\end{\boxkind}
 }
 
@@ -103,7 +110,7 @@
 	before skip=5mm,
 	after skip=5mm,
 	attach boxed title to top right={
-		xshift=-2mm,
+		xshift=-4mm,
 		yshift=-2mm,
 	},
 	boxed title style={
@@ -112,7 +119,7 @@
 		colback=lightgray,
 		colframe=lightgray
 	},
-	fonttitle=\footnotesize\color{gray}
+	fonttitle=\small\color{gray}
 }
 
 \tcbuselibrary{skins}
