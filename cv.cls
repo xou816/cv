@@ -75,15 +75,35 @@
 % Boxes
 \RequirePackage{tcolorbox}
 
+\newlength{\logoboxwidth}
+\setlength{\logoboxwidth}{16mm}
+
+\newcommand\experience[5][default]{
+	\ifthenelse{\equal{main}{#1}}
+		{\def\boxkind{mainexpbox}}
+		{\def\boxkind{expbox}}
+
+	\begin{\boxkind}[title=#2]
+		\begin{minipage}[c]{\logoboxwidth}%
+		\roundedpic{#3}{12mm}
+		\end{minipage}
+		\begin{minipage}[c]{0.8\textwidth}
+		\textbf{#4}
+		\end{minipage}
+		\medskip
+		#5
+	\end{\boxkind}
+}
+
 \newcommand{\commonbox}{
 	enhanced,
-	left=0pt,
-	right=0pt,
+	left=1em,
+	right=1em,
 	interior hidden,
 	before skip=5mm,
 	after skip=5mm,
-	attach boxed title to top center={
-		%xshift=2mm,
+	attach boxed title to top right={
+		xshift=-2mm,
 		yshift=-2mm,
 	},
 	boxed title style={
