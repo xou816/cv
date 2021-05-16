@@ -4,6 +4,8 @@
 % Class+geometry
 \LoadClass[a4paper,11pt]{article}
 \RequirePackage[top=20mm, left=20mm, right=20mm, bottom=20mm]{geometry}
+\RequirePackage{titlesec}
+\RequirePackage{fancyhdr}
 
 % Font
 \RequirePackage{lmodern}
@@ -77,7 +79,20 @@
 	\end{tikzpicture}%
 }}
 
-\newcommand\colsec[1]{\section*{\color{solred} #1}}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\titlespacing*{\section}{0pt}{2\baselineskip}{1ex}
+\titleformat{\section}{\Large\bfseries\color{solred}}{}{0em}{}
+
+\fancypagestyle{withheader}{%
+	\lhead{} % affichage du fond de page
+	\chead{\itshape\color{gray} CV Alexandre Trendel}
+	\rhead{}
+	\lfoot{}
+	\cfoot{}
+	\rfoot{}
+}
 
 % Boxes
 \RequirePackage{tcolorbox}
