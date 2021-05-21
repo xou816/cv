@@ -68,7 +68,7 @@
 \RequirePackage{tcolorbox}
 
 \newlength{\logoboxwidth}
-\setlength{\logoboxwidth}{16mm}
+\setlength{\logoboxwidth}{10mm}
 
 \newcommand\experience[5][default]{
 	\ifthenelse{\equal{main}{#1}}
@@ -76,15 +76,14 @@
 		{\def\boxkind{expbox}}
 
 	\begin{\boxkind}[title=#2]
-		\begin{minipage}[t]{\logoboxwidth}%
-		\roundedpic{#3}{12mm}
+		\begin{minipage}[c]{\logoboxwidth}%
+		\roundedpic{#3}{\logoboxwidth}%
 		\end{minipage}
 		\hfill
-		\begin{minipage}[t]{0.82\textwidth}
-		\textbf{#4}
-		\smallskip\\
+		\begin{minipage}[c]{0.86\textwidth}%
+		\textbf{#4}%
+		\end{minipage}\smallskip
 		#5
-		\end{minipage}
 	\end{\boxkind}
 }
 
@@ -93,10 +92,10 @@
 	left=1em,
 	right=1em,
 	interior hidden,
-	before skip=5mm,
-	after skip=5mm,
-	attach boxed title to top center={
-		%xshift=-2mm,
+	before skip=3mm,
+	after skip=3mm,
+	attach boxed title to top right={
+		xshift=-2mm,
 		yshift=-2mm,
 	},
 	boxed title style={
