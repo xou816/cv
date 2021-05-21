@@ -3,7 +3,7 @@
 
 % Class+geometry
 \LoadClass[a4paper,11pt]{article}
-\RequirePackage[top=15mm, left=12mm, right=12mm]{geometry}
+\RequirePackage[top=15mm, left=12mm, right=12mm, bottom=12mm]{geometry}
 
 % Font
 \RequirePackage{lmodern}
@@ -53,16 +53,8 @@
 \newcommand\link[1]{\underline{\smash{#1}}}
 
 % Tags
-\newcommand\thetagcolor{solblue}
+\newcommand\thetagcolor{solviolet}
 \newcommand\tagcollection[1]{\renewcommand{\thetagcolor}{#1}}
-\newcommand\theicon{star-full}
-\newcommand\tag[2]{%
-\renewcommand\theicon{\ifthenelse{\equal{#2}{1}}{\faicon{star}}{\faicon{star-half-o}}}%
-\raisebox{-.3\baselineskip}{%
-	\noindent\begin{tikzpicture}%
-	\node[fill=\thetagcolor, text height=1.5ex, minimum height=1.5ex, text=white, rounded corners] at (0, 0) {\footnotesize #1 \theicon};
-	\end{tikzpicture}%
-}}
 \newcommand\otag[1]{%
 \raisebox{-1ex}{%
 	\noindent\begin{tikzpicture}%
@@ -75,15 +67,36 @@
 % Boxes
 \RequirePackage{tcolorbox}
 
+\newlength{\logoboxwidth}
+\setlength{\logoboxwidth}{16mm}
+
+\newcommand\experience[5][default]{
+	\ifthenelse{\equal{main}{#1}}
+		{\def\boxkind{mainexpbox}}
+		{\def\boxkind{expbox}}
+
+	\begin{\boxkind}[title=#2]
+		\begin{minipage}[t]{\logoboxwidth}%
+		\roundedpic{#3}{12mm}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.82\textwidth}
+		\textbf{#4}
+		\smallskip\\
+		#5
+		\end{minipage}
+	\end{\boxkind}
+}
+
 \newcommand{\commonbox}{
 	enhanced,
-	left=0pt,
-	right=0pt,
+	left=1em,
+	right=1em,
 	interior hidden,
 	before skip=5mm,
 	after skip=5mm,
 	attach boxed title to top center={
-		%xshift=2mm,
+		%xshift=-2mm,
 		yshift=-2mm,
 	},
 	boxed title style={
