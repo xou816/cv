@@ -84,6 +84,8 @@
 \renewcommand{\footrulewidth}{0pt}
 \titlespacing*{\section}{0pt}{2\baselineskip}{1ex}
 \titleformat{\section}{\Large\bfseries\color{solred}}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{0pt}{1ex}
+\titleformat{\subsection}{\bfseries}{}{0em}{}
 
 \fancypagestyle{withheader}{%
 	\lhead{} % affichage du fond de page
