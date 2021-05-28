@@ -75,7 +75,7 @@
 \newcommand\otag[1]{%
 \raisebox{-1ex}{%
 	\noindent\begin{tikzpicture}%
-	\node[draw=\thetagcolor, text height=1ex, minimum height=1ex, text=\thetagcolor, rounded corners] at (0, 0) {\small\vphantom{Ag}#1};
+	\node[fill=\thetagcolor, text height=1.5ex, minimum height=1.5ex, text=white, rounded corners] at (0, 0) {\vphantom{Ag}#1};
 	\end{tikzpicture}%
 }}
 
