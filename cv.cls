@@ -32,6 +32,7 @@
 % Colors
 \definecolor{bg}{HTML}{fafafa}
 \definecolor{bg2}{HTML}{f0f0f0}
+\definecolor{darkgray}{gray}{0.3}
 \definecolor{gray}{gray}{0.6}
 \definecolor{lightgray}{gray}{0.9}
 
@@ -75,7 +76,7 @@
 \newcommand\otag[1]{%
 \raisebox{-1ex}{%
 	\noindent\begin{tikzpicture}%
-	\node[fill=\thetagcolor, text height=1.5ex, minimum height=1.5ex, text=white, rounded corners] at (0, 0) {\vphantom{Ag}#1};
+	\node[fill=\thetagcolor, text height=1.8ex, minimum height=1.8ex, text=white, rounded corners] at (0, 0) {\large\vphantom{Ag}#1};
 	\end{tikzpicture}%
 }}
 
@@ -84,7 +85,7 @@
 \renewcommand{\footrulewidth}{0pt}
 \titlespacing*{\section}{0pt}{2\baselineskip}{1ex}
 \titleformat{\section}{\Large\bfseries\color{solred}}{}{0em}{}
-\titlespacing*{\subsection}{0pt}{0pt}{1ex}
+\titlespacing*{\subsection}{0pt}{\baselineskip}{1ex}
 \titleformat{\subsection}{\bfseries}{}{0em}{}
 
 \fancypagestyle{withheader}{%
@@ -100,35 +101,39 @@
 \RequirePackage{tcolorbox}
 
 \newlength{\logoboxwidth}
-\setlength{\logoboxwidth}{16mm}
+\setlength{\logoboxwidth}{18mm}
 
-\newcommand\experience[6][default]{
+\newcommand\experience[7][default]{
 	\ifthenelse{\equal{main}{#1}}
 		{\def\boxkind{mainexpbox}}
 		{\def\boxkind{expbox}}
 
 	\begin{\boxkind}[title=#2]
 		\begin{minipage}[c]{\logoboxwidth}%
-		\roundedpic{#3}{12mm}
+		\roundedpic{#3}{14mm}
 		\end{minipage}
 		\begin{minipage}[c]{0.8\textwidth}
-		\large\textbf{#4}\\#5
+		{\large\bfseries #4}\\
+		#5\\
+		{\footnotesize\color{darkgray}\faicon{map-marker} #6}
 		\end{minipage}
-		\medskip
-		#6
+		\bigskip
+		#7
 	\end{\boxkind}
 }
 
 \newcommand{\commonbox}{
 	enhanced,
-	left=1em,
-	right=1em,
+	left=0.5em,
+	right=0.5em,
+	top=0.5em,
+	bottom=0.5em,
 	interior hidden,
 	before skip=5mm,
 	after skip=5mm,
 	attach boxed title to top right={
 		xshift=-4mm,
-		yshift=-2mm,
+		yshift=-3mm,
 	},
 	boxed title style={
 		skin=standard,
@@ -171,5 +176,7 @@
 	}, 
 	extrude left by=2mm,
 	extrude right by=2mm,
+	extrude top by=2mm,
+	extrude bottom by=2mm,
 	#1,
 }
